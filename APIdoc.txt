@@ -1,0 +1,41 @@
+APIs
+
+local: http://172.16.216.4/pook/index.php
+
+==============================================
+Load all notifications
+==============================================
+service: loadnotifications
+method: POST
+params:
+  - userid
+response
+  - profile (a field for user's profile image
+  ...
+
+==============================================
+Mark a notification as read
+==============================================
+service: readnotification
+method: POST
+params:
+  - notificationid
+
+==============================================
+Mark many notifications as read
+==============================================
+service: readnotifications
+method: POST
+params:
+  - notificationids (ex: 1,2,3)
+
+==============================================
+Update user's profile
+==============================================
+service: updateprofile
+method: POST
+params:
+  - userid
+  - profile (real photo object)
+response
+  - profileurl (newly updated user's photo url)
